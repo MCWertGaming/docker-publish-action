@@ -40,6 +40,11 @@ if [[ "$DO_PUSH" == "" ]]; then
     echo "Disabling docker push!"
     DO_PUSH=false
 fi
+# set repo to test name if nothing is specified
+if [[ "$REPOSITORY" == "" && "$DO_PUSH" == "false" ]]; then
+    echo "Using test tag!"
+    REPOSITORY=test
+fi
 
 echo ""
 echo "Checking for wrong input"
