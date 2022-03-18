@@ -7,7 +7,6 @@ echo "======================="
 echo ""
 
 # check if the user tries to open a shell
-
 if [[ "$1" == "bash" || "$1" == "/usr/bin/bash" || "$1" == "/bin/bash" || "$1" == "sh" || "$1" == "/bin/sh" || "$1" == "/usr/bin/sh" ]]; then
     echo "Here is your shell!"
     /usr/bin/env sh
