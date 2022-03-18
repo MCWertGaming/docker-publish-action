@@ -21,11 +21,11 @@ echo ""
 echo "Setting default values"
 echo "======================"
 # set default options
-if [[ "$REGISTRY" == "dockerhub" || "$REPOSITORY" == "DockerHub" || "$REPOSITORY" == "Dockerhub"  || "$REPOSITRY" == "" ]]; then
+if [[ "$REGISTRY" == "dockerhub" || "$REGISTRY" == "DockerHub" || "$REGISTRY" == "Dockerhub"  || "$REGISTRY" == "" ]]; then
     echo "Dockerhub login detected! switching to dockerhub registry..."
     export REGISTRY=docker.io
     # TODO: implement
-elif [[ "$REPOSITORY" == "quay" || "$REPOSITORY" == "Quay"  ]]; then
+elif [[ "$REGISTRY" == "quay" || "$REGISTRY" == "Quay"  ]]; then
     echo "Dockerhub login detected! switching to dockerhub registry..."
     export REGISTRY=quay.io
     # TODO: Implement
